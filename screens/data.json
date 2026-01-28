@@ -1,0 +1,105 @@
+{
+  "farm": {
+    "name": "TINY FARM TD1",
+    "owner": "Farmfarmer99"
+  },
+  "animals": {
+    "pre": {
+      "name": "Pré",
+      "icon": "🐄",
+      "type": "Vaches",
+      "stats": [
+        { "label": "Nombre", "value": "15" },
+        { "label": "Santé", "value": "95%" },
+        { "label": "Production Lait", "value": "450L" },
+        { "label": "Âge Moyen", "value": "4.2 ans" }
+      ],
+      "actions": [
+        { "icon": "🍽️", "name": "Nourrir les vaches" },
+        { "icon": "🏥", "name": "Vérifier la santé" },
+        { "icon": "🔍", "name": "Inspecter l'enclos" },
+        { "icon": "📈", "name": "Consulter stats production" }
+      ]
+    },
+    "poulailler": {
+      "name": "Poulailler",
+      "icon": "🐔",
+      "type": "Poules",
+      "stats": [
+        { "label": "Nombre", "value": "45" },
+        { "label": "Santé", "value": "98%" },
+        { "label": "Production Œufs", "value": "38/jour" },
+        { "label": "Âge Moyen", "value": "2.5 ans" }
+      ],
+      "actions": [
+        { "icon": "🍽️", "name": "Nourrir les poules" },
+        { "icon": "🏥", "name": "Vérifier la santé" },
+        { "icon": "🧹", "name": "Nettoyer le poulailler" },
+        { "icon": "📊", "name": "Consulter production" }
+      ]
+    },
+    "clapier": {
+      "name": "Clapier",
+      "icon": "🐰",
+      "type": "Lapins",
+      "stats": [
+        { "label": "Nombre", "value": "28" },
+        { "label": "Santé", "value": "92%" },
+        { "label": "Poids Moyen", "value": "2.8 kg" },
+        { "label": "Âge Moyen", "value": "1.8 ans" }
+      ],
+      "actions": [
+        { "icon": "🥬", "name": "Nourrir les lapins" },
+        { "icon": "💧", "name": "Abreuver" },
+        { "icon": "🏥", "name": "Vérifier la santé" },
+        { "icon": "🧽", "name": "Nettoyer les cages" }
+      ]
+    }
+  },
+  "approvisionnement": {
+    "name": "Approvisionnement",
+    "icon": "📦",
+    "supplies": [
+      { "name": "Foin", "quantity": "2400 kg" },
+      { "name": "Céréales", "quantity": "800 kg" },
+      { "name": "Minéraux", "quantity": "150 kg" },
+      { "name": "Vitamines", "quantity": "50 L" },
+      { "name": "Eau Filtrée", "quantity": "5000 L" },
+      { "name": "Litière", "quantity": "300 kg" }
+    ]
+  },
+  "suppliers": {
+    "cooperative": {
+      "name": "Coopérative Agricole",
+      "icon": "🏪",
+      "description": "Fournisseur officiel de la coopérative agricole régionale",
+      "benefits": [
+        "Tarifs négociés pour les membres",
+        "Livraison hebdomadaire garantie",
+        "Produits certifiés biologiques",
+        "Support technique inclus"
+      ],
+      "price_level": "Modéré",
+      "delivery_time": "3-5 jours"
+    },
+    "marche": {
+      "name": "Marché des Éleveurs",
+      "icon": "🛒",
+      "description": "Marché direct entre éleveurs pour partage de ressources",
+      "benefits": [
+        "Tarifs compétitifs entre pairs",
+        "Livraison rapide possible",
+        "Produits frais de qualité",
+        "Réseau communautaire"
+      ],
+      "price_level": "Variable",
+      "delivery_time": "1-3 jours"
+    }
+  },
+  "rankings": [
+    { "rank": "1", "name": "Production Lait", "value": "8520L" },
+    { "rank": "2", "name": "Production Œufs", "value": "1710/mois" },
+    { "rank": "3", "name": "Santé Animaux", "value": "94.3%" },
+    { "rank": "4", "name": "Efficacité Coûts", "value": "87%" }
+  ]
+}
