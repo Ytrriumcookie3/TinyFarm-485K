@@ -5,25 +5,30 @@ Welcome to the **TinyFarm** project repository. This project is part of the L2 C
 TinyFarm is a web-based farming simulation game. Players start with a loan of **1,500 écus** and must manage their farm (cows, chickens, rabbits) to produce goods and eventually repay their debt.
 
 ## 👥 Team Members (Group 485K)
-- **SOUDANT Raphaël** - Lead Project
 
-- ARMANET André - Coordinator
+### 🧑‍💼 Management
+- **SOUDANT Raphaël** — Lead Project
+- **ARMANET André** — Coordinator
 
-- DIXNEUF Arthur - lead Frontend
-- DIOMANDE Bemisolo - Frontend Developer
-- ALTUNDAG Mehmet - Frontend Developer
-- OPREA Robert - Frontend Developer
-- ELYAKHUNOV Ramzes - Frontend Developer
-- DOUANAMOU Alexandre - UX Design
-- TAGODOE Koami - UX Design 
-- SOW Bineta - UX Design
+### 🎨 UX Design
+- DOUANAMOU Alexandre
+- TAGODOE Koami
+- SOW Bineta
 
-- DIATTA Thomas - Lead Backend
-- HANOU Aristippe - Backend Developer
-- KHALDI Rami - Backend Developer
-- PENALVA Théo - Backend Developer
-- ABUBAKER MOHAMED Mohamed - Backend Developer
-- PARRACHO Henri - Backend Developer
+### 💻 Frontend
+- **DIXNEUF Arthur** — Lead Frontend
+- DIOMANDE Bemisolo
+- ALTUNDAG Mehmet
+- OPREA Robert
+- ELYAKHUNOV Ramzes
+
+### 🖥️ Backend
+- **DIATTA Thomas** — Lead Backend
+- HANOU Aristippe
+- KHALDI Rami
+- PENALVA Théo
+- ABUBAKER MOHAMED Mohamed
+- PARRACHO Henri
 
 ## 📂 Project Structure
 - `/screens`: Static HTML/CSS/JSON mock-up of the game interface (Deadline: Jan 30).
