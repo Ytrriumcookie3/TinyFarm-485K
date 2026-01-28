@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TINY FARM - TD1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app"></div>
+ 
+    <!-- Screen 1: Login -->
+    <div id="screen-1" class="screen">
+        <div class="login-container">
+            <div class="login-card">
+                <h1>TINY FARM</h1>
+                <p class="subtitle">Gérez votre élevage efficacement</p>
+                
+                <div class="login-buttons">
+                    <button class="btn btn-github" onclick="redirectToScreen(2)">
+                        <span class="github-icon">🔗</span> Se connecter avec GitHub
+                    </button>
+                    <button class="btn btn-secondary" onclick="redirectToScreen(2)">
+                        Se connecter
+                    </button>
+                </div>
+
+                <div class="login-settings">
+                    <button class="btn-settings" title="Paramètres">⚙️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 2: Dashboard avec Classements -->
+    <div id="screen-2" class="screen hidden">
+        <div class="header">
+            <h1>TINY FARM</h1>
+            <button class="btn-logout" onclick="redirectToScreen(1)">Déconnexion</button>
+        </div>
+
+        <div class="dashboard-container">
+            <div class="classements-sidebar">
+                <h2>Classements</h2>
+                <div id="rankings-list" class="rankings-list"></div>
+            </div>
+
+            <div class="main-content">
+                <h2>Gestion de la Ferme</h2>
+                <div class="animals-grid">
+                    <div class="animal-card" onclick="navigateToAnimal('pre')">
+                        <div class="animal-icon">🐄</div>
+                        <h3>Pré</h3>
+                        <p>Gestion des vaches</p>
+                        <button class="btn btn-primary">Voir Détails</button>
+                    </div>
+
+                    <div class="animal-card" onclick="navigateToAnimal('poulailler')">
+                        <div class="animal-icon">🐔</div>
+                        <h3>Poulailler</h3>
+                        <p>Gestion des poules</p>
+                        <button class="btn btn-primary">Voir Détails</button>
+                    </div>
+
+                    <div class="animal-card" onclick="navigateToAnimal('clapier')">
+                        <div class="animal-icon">🐰</div>
+                        <h3>Clapier</h3>
+                        <p>Gestion des lapins</p>
+                        <button class="btn btn-primary">Voir Détails</button>
+                    </div>
+
+                    <div class="animal-card" onclick="navigateToAnimal('approvisionnement')">
+                        <div class="animal-icon">📦</div>
+                        <h3>Approvisionnement</h3>
+                        <p>Gestion des ressources</p>
+                        <button class="btn btn-primary">Voir Détails</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 3: Animal Stats (V1-V4) -->
+    <div id="screen-3" class="screen hidden">
+        <div class="header">
+            <button class="btn-back" onclick="redirectToScreen(2)">← Retour</button>
+            <h1 id="animal-title">Stats Animaux</h1>
+        </div>
+
+        <div id="screen-3-content" class="content-container">
+            <!-- V1: Pré (Vaches) -->
+            <div id="animal-pre" class="animal-view">
+                <div class="stats-container">
+                    <h2>📊 Stats des Vaches</h2>
+                    <div class="stats-grid" id="pre-stats"></div>
+                </div>
+                <div class="actions-container">
+                    <h3>Actions disponibles</h3>
+                    <div class="actions-list" id="pre-actions"></div>
+                </div>
+            </div>
+
+            <!-- V2: Poulailler (Poules) -->
+            <div id="animal-poulailler" class="animal-view hidden">
+                <div class="stats-container">
+                    <h2>📊 Stats des Poules</h2>
+                    <div class="stats-grid" id="poulailler-stats"></div>
+                </div>
+                <div class="actions-container">
+                    <h3>Actions disponibles</h3>
+                    <div class="actions-list" id="poulailler-actions"></div>
+                </div>
+            </div>
+
+            <!-- V3: Clapier (Lapins) -->
+            <div id="animal-clapier" class="animal-view hidden">
+                <div class="stats-container">
+                    <h2>📊 Stats des Lapins</h2>
+                    <div class="stats-grid" id="clapier-stats"></div>
+                </div>
+                <div class="actions-container">
+                    <h3>Actions disponibles</h3>
+                    <div class="actions-list" id="clapier-actions"></div>
+                </div>
+            </div>
+
+            <!-- V4: Approvisionnement -->
+            <div id="animal-approvisionnement" class="animal-view hidden">
+                <div class="stats-container">
+                    <h2>📦 Approvisionnement</h2>
+                    <div class="supply-options" id="supply-options"></div>
+                </div>
+                <div class="actions-container">
+                    <h3>Choix de fournisseur</h3>
+                    <div class="supplier-buttons">
+                        <button class="btn btn-supplier" onclick="navigateToSupplier('cooperative')">
+                            🏪 Coopérative
+                        </button>
+                        <button class="btn btn-supplier" onclick="navigateToSupplier('marche')">
+                            🛒 Marché des Éleveurs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 4: Suppliers -->
+    <div id="screen-4" class="screen hidden">
+        <div class="header">
+            <div class="back-buttons-group">
+                <button class="btn-back" onclick="redirectToScreen(3)">← Retour à l'approvisionnement</button>
+                <button class="btn-back" onclick="redirectToScreen(2)" style="background-color: rgba(255, 107, 107, 0.2);">🏠 Menu principal</button>
+            </div>
+            <h1 id="supplier-title">Sélectionner un Fournisseur</h1>
+        </div>
+
+        <div class="content-container">
+            <div id="cooperative-view" class="supplier-view">
+                <div class="supplier-card featured">
+                    <h2>🏪 Coopérative Agricole</h2>
+                    <p>Fournisseur officiel de la coopérative</p>
+                    <div class="supplier-details" id="cooperative-details"></div>
+                    <button class="btn btn-primary" onclick="selectSupplier('cooperative')">
+                        Commander à la Coopérative
+                    </button>
+                </div>
+            </div>
+
+            <div id="marche-view" class="supplier-view">
+                <div class="supplier-card featured">
+                    <h2>🛒 Marché des Éleveurs</h2>
+                    <p>Marché direct entre éleveurs</p>
+                    <div class="supplier-details" id="marche-details"></div>
+                    <button class="btn btn-primary" onclick="selectSupplier('marche')">
+                        Commander au Marché
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.json"></script>
+    <script src="script.js"></script>
+</body>
+</html>
